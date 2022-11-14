@@ -1,27 +1,28 @@
 //computer will give an random output function
-function computerplay(){
+function getcomputerchoice(){
     const choice = ["rock","paper","sissor"];
     const out = [Math.floor(Math.random()*3)]
     return choice[out]
     }
 //player score function
-function userplay(userselection,computerselection)
+function playround(playerselection,computerselection)
 {
 let playerscore=0
 let computerscore=0
 
- if ((userselection==="rock" && computerselection==="sissor") || 
-    (userselection==="paper" && computerselection==="rock") ||
-    (userselection==="sissor" && computerselection==="paper"))
+ if ((playerselection==="rock" && computerselection==="sissor") || 
+    (playerselection==="paper" && computerselection==="rock") ||
+    (playerselection==="sissor" && computerselection==="paper"))
 {
         playerscore=1
+        console.log("You won "+playerselection+" beats the "+computerselection)
         
 }
 
 else 
 {
     computerscore=1
-    
+    console.log("You lose "+computerselection+" beats the "+playerselection)
 }
 return playerscore
 }
@@ -40,7 +41,7 @@ while(roundsplayed<totalrounds){
     {
        continue     
     }
-    let computerselection=computerplay()
+    let computerselection=getcomputerchoice()
     if(userselection===computerselection)
     {
         console.log("its tie both choose "+computerselection)
@@ -51,10 +52,10 @@ while(roundsplayed<totalrounds){
         console.log("player-->" + userselection)
         console.log("computer-->" + computerselection)
 
-    playerpoint+= userplay(userselection,computerselection)
+    playerpoint+= playround(userselection,computerselection)
     roundsplayed++
 }
-console.log("total player score "+playerpoint)
+console.log("your score  "+playerpoint)
 
 
 
