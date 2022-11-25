@@ -1,0 +1,50 @@
+html{
+    background: url(images/bg.jpg);
+    background-size: cover;
+}
+
+#head{
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: 50px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container{
+    display: flex;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+p{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    
+}
+.edit{
+    margin: 25px;
+    border-radius: 10%;
+    transition: all 0.09s ease;
+}
+.img{
+    border-radius:10%
+    
+}
+#result{
+    font-size: 30px;
+    font-weight: bolder;
+    
+}
+.playing {
+    transform: scale(1.2);
+    border-color: greenyellow;
+    box-shadow: 0 0 2rem brown;
+
+}
